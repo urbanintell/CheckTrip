@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B214818C1DC136FA009B5730 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818A1DC136FA009B5730 /* AppState.swift */; };
+		B214818D1DC136FA009B5730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818B1DC136FA009B5730 /* Constants.swift */; };
+		B214818F1DC15844009B5730 /* TSAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818E1DC15844009B5730 /* TSAParser.swift */; };
+		B2B23B281DC06BA7006DE10F /* ETAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B23B271DC06BA7006DE10F /* ETAController.swift */; };
 		B2EC09A91DC037B600B1C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */; };
-		B2EC09AB1DC037B600B1C0F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09AA1DC037B600B1C0F6 /* ViewController.swift */; };
 		B2EC09AE1DC037B600B1C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09AC1DC037B600B1C0F6 /* Main.storyboard */; };
-		B2EC09B01DC037B600B1C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09AF1DC037B600B1C0F6 /* Assets.xcassets */; };
-		B2EC09B31DC037B600B1C0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09B11DC037B600B1C0F6 /* LaunchScreen.storyboard */; };
+		B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09BF1DC03CD200B1C0F6 /* MainViewController.swift */; };
+		B2EC09C71DC03CD200B1C0F6 /* MainViewController+flightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C01DC03CD200B1C0F6 /* MainViewController+flightTableView.swift */; };
+		B2EC09C81DC03CD200B1C0F6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C11DC03CD200B1C0F6 /* SignInViewController.swift */; };
+		B2EC09C91DC03CD200B1C0F6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */; };
+		B2EC09CA1DC03CD200B1C0F6 /* FlightInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */; };
+		B2EC09CB1DC03CD200B1C0F6 /* DetailFlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */; };
+		B2EC09CC1DC03CD200B1C0F6 /* SearchFlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */; };
+		B2EC09D41DC03D0900B1C0F6 /* FlightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */; };
+		B2EC09D71DC03D4000B1C0F6 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D51DC03D4000B1C0F6 /* Flight.swift */; };
+		B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */; };
+		B2EC09DC1DC03D6B00B1C0F6 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09DA1DC03D6B00B1C0F6 /* OpenWeatherService.swift */; };
+		B2EC09DD1DC03D6B00B1C0F6 /* GoogleDestinationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09DB1DC03D6B00B1C0F6 /* GoogleDestinationService.swift */; };
+		B2EC09DF1DC03DD500B1C0F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09DE1DC03DD500B1C0F6 /* GoogleService-Info.plist */; };
+		B2EC09E11DC03EEF00B1C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09E01DC03EEF00B1C0F6 /* Assets.xcassets */; };
+		B2EC09E31DC03EFE00B1C0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09E21DC03EFE00B1C0F6 /* LaunchScreen.storyboard */; };
+		EBC2A8EF4201ADD3801418E7 /* Pods_CheckTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCB0F8AFE459A58D34C1F93 /* Pods_CheckTrip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52C49BC110A7D3F3510FDDED /* Pods-CheckTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip.debug.xcconfig"; sourceTree = "<group>"; };
+		ABCB0F8AFE459A58D34C1F93 /* Pods_CheckTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B214818A1DC136FA009B5730 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B214818B1DC136FA009B5730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B214818E1DC15844009B5730 /* TSAParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAParser.swift; sourceTree = "<group>"; };
+		B2B23B271DC06BA7006DE10F /* ETAController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETAController.swift; sourceTree = "<group>"; };
 		B2EC09A51DC037B600B1C0F6 /* CheckTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2EC09AA1DC037B600B1C0F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2EC09AD1DC037B600B1C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B2EC09AF1DC037B600B1C0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B2EC09B21DC037B600B1C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2EC09B41DC037B600B1C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EC09BF1DC03CD200B1C0F6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B2EC09C01DC03CD200B1C0F6 /* MainViewController+flightTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+flightTableView.swift"; sourceTree = "<group>"; };
+		B2EC09C11DC03CD200B1C0F6 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInputController.swift; sourceTree = "<group>"; };
+		B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFlightController.swift; sourceTree = "<group>"; };
+		B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightController.swift; sourceTree = "<group>"; };
+		B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightViewCell.swift; sourceTree = "<group>"; };
+		B2EC09D51DC03D4000B1C0F6 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfo.swift; sourceTree = "<group>"; };
+		B2EC09DA1DC03D6B00B1C0F6 /* OpenWeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
+		B2EC09DB1DC03D6B00B1C0F6 /* GoogleDestinationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDestinationService.swift; sourceTree = "<group>"; };
+		B2EC09DE1DC03DD500B1C0F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2EC09E01DC03EEF00B1C0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2EC09E21DC03EFE00B1C0F6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D71F9273F712238FB5BD4006 /* Pods-CheckTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC2A8EF4201ADD3801418E7 /* Pods_CheckTrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30A24C6E602166D77A89099C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABCB0F8AFE459A58D34C1F93 /* Pods_CheckTrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CDD990B9A3F8F6D2017E60C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52C49BC110A7D3F3510FDDED /* Pods-CheckTrip.debug.xcconfig */,
+				D71F9273F712238FB5BD4006 /* Pods-CheckTrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B2EC099C1DC037B600B1C0F6 = {
 			isa = PBXGroup;
 			children = (
 				B2EC09A71DC037B600B1C0F6 /* CheckTrip */,
 				B2EC09A61DC037B600B1C0F6 /* Products */,
+				3CDD990B9A3F8F6D2017E60C /* Pods */,
+				30A24C6E602166D77A89099C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +110,78 @@
 		B2EC09A71DC037B600B1C0F6 /* CheckTrip */ = {
 			isa = PBXGroup;
 			children = (
-				B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */,
-				B2EC09AA1DC037B600B1C0F6 /* ViewController.swift */,
+				B2EC09D91DC03D5300B1C0F6 /* Services */,
+				B2EC09BE1DC03C5300B1C0F6 /* Controllers */,
+				B2EC09BD1DC03C4A00B1C0F6 /* Views */,
+				B2EC09BC1DC03C4300B1C0F6 /* Models */,
+				B2EC09BB1DC03C2600B1C0F6 /* Supporting Files */,
+				B2EC09BA1DC03C1500B1C0F6 /* Firebase */,
 				B2EC09AC1DC037B600B1C0F6 /* Main.storyboard */,
-				B2EC09AF1DC037B600B1C0F6 /* Assets.xcassets */,
-				B2EC09B11DC037B600B1C0F6 /* LaunchScreen.storyboard */,
-				B2EC09B41DC037B600B1C0F6 /* Info.plist */,
+				B2EC09E21DC03EFE00B1C0F6 /* LaunchScreen.storyboard */,
 			);
 			path = CheckTrip;
+			sourceTree = "<group>";
+		};
+		B2EC09BA1DC03C1500B1C0F6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				B214818A1DC136FA009B5730 /* AppState.swift */,
+				B214818B1DC136FA009B5730 /* Constants.swift */,
+			);
+			name = Firebase;
+			sourceTree = "<group>";
+		};
+		B2EC09BB1DC03C2600B1C0F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2EC09DE1DC03DD500B1C0F6 /* GoogleService-Info.plist */,
+				B2EC09E01DC03EEF00B1C0F6 /* Assets.xcassets */,
+				B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */,
+				B2EC09B41DC037B600B1C0F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2EC09BC1DC03C4300B1C0F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2EC09D51DC03D4000B1C0F6 /* Flight.swift */,
+				B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2EC09BD1DC03C4A00B1C0F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2EC09BE1DC03C5300B1C0F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2EC09BF1DC03CD200B1C0F6 /* MainViewController.swift */,
+				B2EC09C01DC03CD200B1C0F6 /* MainViewController+flightTableView.swift */,
+				B2EC09C11DC03CD200B1C0F6 /* SignInViewController.swift */,
+				B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */,
+				B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */,
+				B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */,
+				B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */,
+				B2B23B271DC06BA7006DE10F /* ETAController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B2EC09D91DC03D5300B1C0F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B2EC09DA1DC03D6B00B1C0F6 /* OpenWeatherService.swift */,
+				B2EC09DB1DC03D6B00B1C0F6 /* GoogleDestinationService.swift */,
+				B214818E1DC15844009B5730 /* TSAParser.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2EC09B71DC037B600B1C0F6 /* Build configuration list for PBXNativeTarget "CheckTrip" */;
 			buildPhases = (
+				68C345C79237D278864B0D87 /* [CP] Check Pods Manifest.lock */,
 				B2EC09A11DC037B600B1C0F6 /* Sources */,
 				B2EC09A21DC037B600B1C0F6 /* Frameworks */,
 				B2EC09A31DC037B600B1C0F6 /* Resources */,
+				8F46BB7D7D69E7D7ACB84686 /* [CP] Embed Pods Frameworks */,
+				9F04384EE569A49CA07ADE7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +220,7 @@
 					B2EC09A41DC037B600B1C0F6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = NEMVSAH4CJ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,21 +248,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EC09B31DC037B600B1C0F6 /* LaunchScreen.storyboard in Resources */,
-				B2EC09B01DC037B600B1C0F6 /* Assets.xcassets in Resources */,
+				B2EC09DF1DC03DD500B1C0F6 /* GoogleService-Info.plist in Resources */,
+				B2EC09E31DC03EFE00B1C0F6 /* LaunchScreen.storyboard in Resources */,
+				B2EC09E11DC03EEF00B1C0F6 /* Assets.xcassets in Resources */,
 				B2EC09AE1DC037B600B1C0F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68C345C79237D278864B0D87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F46BB7D7D69E7D7ACB84686 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F04384EE569A49CA07ADE7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2EC09A11DC037B600B1C0F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EC09AB1DC037B600B1C0F6 /* ViewController.swift in Sources */,
+				B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */,
+				B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */,
+				B2EC09CC1DC03CD200B1C0F6 /* SearchFlightController.swift in Sources */,
 				B2EC09A91DC037B600B1C0F6 /* AppDelegate.swift in Sources */,
+				B214818F1DC15844009B5730 /* TSAParser.swift in Sources */,
+				B2EC09DC1DC03D6B00B1C0F6 /* OpenWeatherService.swift in Sources */,
+				B2EC09C91DC03CD200B1C0F6 /* RegisterViewController.swift in Sources */,
+				B214818C1DC136FA009B5730 /* AppState.swift in Sources */,
+				B214818D1DC136FA009B5730 /* Constants.swift in Sources */,
+				B2EC09CB1DC03CD200B1C0F6 /* DetailFlightController.swift in Sources */,
+				B2EC09D41DC03D0900B1C0F6 /* FlightViewCell.swift in Sources */,
+				B2EC09DD1DC03D6B00B1C0F6 /* GoogleDestinationService.swift in Sources */,
+				B2B23B281DC06BA7006DE10F /* ETAController.swift in Sources */,
+				B2EC09CA1DC03CD200B1C0F6 /* FlightInputController.swift in Sources */,
+				B2EC09C81DC03CD200B1C0F6 /* SignInViewController.swift in Sources */,
+				B2EC09C71DC03CD200B1C0F6 /* MainViewController+flightTableView.swift in Sources */,
+				B2EC09D71DC03D4000B1C0F6 /* Flight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,14 +339,6 @@
 				B2EC09AD1DC037B600B1C0F6 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B2EC09B11DC037B600B1C0F6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2EC09B21DC037B600B1C0F6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -182,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -231,6 +412,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -257,12 +439,14 @@
 		};
 		B2EC09B81DC037B600B1C0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C49BC110A7D3F3510FDDED /* Pods-CheckTrip.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NEMVSAH4CJ;
 				INFOPLIST_FILE = CheckTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kromah.CheckTrip;
+				PRODUCT_BUNDLE_IDENTIFIER = kromah.derivative.CheckTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -270,12 +454,14 @@
 		};
 		B2EC09B91DC037B600B1C0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71F9273F712238FB5BD4006 /* Pods-CheckTrip.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NEMVSAH4CJ;
 				INFOPLIST_FILE = CheckTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kromah.CheckTrip;
+				PRODUCT_BUNDLE_IDENTIFIER = kromah.derivative.CheckTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -300,6 +486,7 @@
 				B2EC09B91DC037B600B1C0F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
