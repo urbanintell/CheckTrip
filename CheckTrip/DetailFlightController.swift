@@ -168,10 +168,11 @@ class DetailFlightController: UIViewController {
                 
                 let schDep = jsonFlight["departureDate"] as! [String:AnyObject]
 //                flight.schdepartureTimeNumberLabel = schDep["dateLocal"] as! String
-                flightDictionary["dateLocal"] =  schDep["dateLocal"] as? String
+                flightDictionary["departureDateLocal"] =  schDep["dateLocal"] as? String
+               
                 let schArr = jsonFlight["arrivalDate"] as! [String:AnyObject]
 //                flight.scharrivalFlightTimeLabel = schArr["dateLocal"] as! String
-                flightDictionary["dateLocal"] =  schArr["dateLocal"] as? String
+                flightDictionary["arrivalDateLocal"] =  schArr["dateLocal"] as? String
                 
                 if !willCheckBag {
                     flightDictionary["willCheckBag"] = "false"
@@ -204,7 +205,15 @@ class DetailFlightController: UIViewController {
         return flightDictionary
     }
     
-    
+    func stringToDate(date:String){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        if let formattedDate = formatter.date(from:date){
+            print(formattedDate)
+        
+        }
+        
+    }
     
     
     func configureStorage() {
