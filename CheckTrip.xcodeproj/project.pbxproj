@@ -10,6 +10,7 @@
 		B214818C1DC136FA009B5730 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818A1DC136FA009B5730 /* AppState.swift */; };
 		B214818D1DC136FA009B5730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818B1DC136FA009B5730 /* Constants.swift */; };
 		B214818F1DC15844009B5730 /* TSAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818E1DC15844009B5730 /* TSAParser.swift */; };
+		B28A51FE1DC843BD00571B03 /* TSAInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28A51FD1DC843BD00571B03 /* TSAInfo.swift */; };
 		B2B23B281DC06BA7006DE10F /* ETAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B23B271DC06BA7006DE10F /* ETAController.swift */; };
 		B2EC09A91DC037B600B1C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */; };
 		B2EC09AE1DC037B600B1C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09AC1DC037B600B1C0F6 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		B214818A1DC136FA009B5730 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B214818B1DC136FA009B5730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B214818E1DC15844009B5730 /* TSAParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAParser.swift; sourceTree = "<group>"; };
+		B28A51FD1DC843BD00571B03 /* TSAInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAInfo.swift; sourceTree = "<group>"; };
 		B2B23B271DC06BA7006DE10F /* ETAController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETAController.swift; sourceTree = "<group>"; };
 		B2EC09A51DC037B600B1C0F6 /* CheckTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				B2EC09D51DC03D4000B1C0F6 /* Flight.swift */,
 				B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */,
+				B28A51FD1DC843BD00571B03 /* TSAInfo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28A51FE1DC843BD00571B03 /* TSAInfo.swift in Sources */,
 				B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */,
 				B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */,
 				B2EC09CC1DC03CD200B1C0F6 /* SearchFlightController.swift in Sources */,

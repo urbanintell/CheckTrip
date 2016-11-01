@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = UIColor.checkTripBlue()
         spinner.center = view.center
         spinner.hidesWhenStopped = true
         view.addSubview(spinner)

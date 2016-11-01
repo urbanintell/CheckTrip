@@ -172,7 +172,7 @@ extension UIColor{
     
     class func checkTripBlue() -> UIColor{
         
-        return  UIColor(red:60/255,green:117/255,blue:255/255,alpha:1)
+        return  UIColor(red:34/255,green:170/255,blue:226/255,alpha:1)
     }
 }
 
