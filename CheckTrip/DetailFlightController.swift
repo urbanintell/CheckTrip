@@ -35,6 +35,7 @@ class DetailFlightController: UIViewController {
     var willCheckBag: Bool!
     
     var flightStatsUrl: String = "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/"
+   
     var tsaURL: String = "http://apps.tsa.dhs.gov/MyTSAWebService/GetTSOWaitTimes.ashx?ap="
     var flightInfo = FlightInfo()
     var tsaInfo = [TSAInfo]()
@@ -149,7 +150,7 @@ class DetailFlightController: UIViewController {
         let year = dataArr[0]
         let month = dataArr[1]
         let day = dataArr[2]
-        let url = flightStatsUrl.appending("\(airlineName)/\(airlineNumber)/dep/\(year)/\(month)/\(day)?appId=ebdf085d&appKey=1668e8d129b1686e7945852643b0ae44&utc=false")
+        let url = flightStatsUrl.appending("\(airlineName)/\(airlineNumber)/dep/\(year)/\(month)/\(day)?appId=98a92df2&appKey=3644b00bd9356ea1a4c95f65554d23e2&utc=false")
         
         
         return url
@@ -162,6 +163,7 @@ class DetailFlightController: UIViewController {
         let task = urlSession.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
             if let error = error {
+                self.errorMessage()
                 print(error)
                 return
             }
@@ -169,8 +171,15 @@ class DetailFlightController: UIViewController {
             // Parse JSON data
             if let data = data {
                 
+                //check to see if there is data on the flight
+                guard let data = self.parseJsonData(data)  else {
+                    
+                    self.errorMessage()
+                    
+                    return
+                }
                 
-                self.flightData = self.parseJsonData(data)
+                self.flightData = data
                 
          
                 self.setLabels()
@@ -180,6 +189,16 @@ class DetailFlightController: UIViewController {
         
         task.resume()
     }
+    
+    func errorMessage(){
+        self.spinner.stopAnimating()
+        
+        let alert = UIAlertController(title: "Flight Error", message:"No flight data was found" , preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     func setLabels(){
         
         OperationQueue.main.addOperation {
@@ -188,29 +207,20 @@ class DetailFlightController: UIViewController {
                 self.depTextView.text = "N/A"
                 return  }
             self.depTextView.text = departureLabel
-            
-            
-            
             self.departureTerminalLabel.text = "Terminal \(self.flightData["departureTerminal"]!)"
             self.departureGateLabel.text = "Gate \(self.flightData["departureGate"]!)"
-            
             self.arvTextView.text = self.flightData["arrivalAirportFsCode"]!
             self.arrivalTerminalLabel.text = "Terminal \(self.flightData["arrivalTerminal"]!)"
-            
             self.arrivalGateLael.text = "Gate \(self.flightData["arrivalGate"]! )"
             
             self.spinner.stopAnimating()
             
-//            self.departureTimeLabel.text = self.flightInfo.schdepartureTimeNumberLabel
-//            
-//            
-//            
-//            self.arrivalTimeLabel.text = self.flightInfo.scharrivalFlightTimeLabel
+
             
         }
     }
     
-    func parseJsonData(_ data: Data) -> [String:String] {
+    func parseJsonData(_ data: Data) -> [String:String]? {
         
         var flightDictionary = [String:String]()
         
@@ -220,52 +230,93 @@ class DetailFlightController: UIViewController {
             let jsonFlights = jsonResult?["flightStatuses"] as! [AnyObject]
             
             for jsonFlight in jsonFlights {
-                flightDictionary["departureAirportFsCode"] =  jsonFlight["departureAirportFsCode"] as? String
-                flightDictionary["arrivalAirportFsCode"] =  jsonFlight["arrivalAirportFsCode"] as? String
-                
-                let gateInfo = jsonFlight["airportResources"] as! [String:AnyObject]
-//                flight.arrivalTerminal = gateInfo["arrivalTerminal"] as! String
-                flightDictionary["arrivalTerminal"] =  gateInfo["arrivalTerminal"] as? String
-//                flight.arrivalGate = gateInfo["arrivalGate"] as! String
-                flightDictionary["arrivalGate"] =  gateInfo["arrivalGate"] as? String
-//                flight.departureTerminal = gateInfo["departureTerminal"] as! String
-                flightDictionary["departureTerminal"] =  gateInfo["departureTerminal"] as? String
-//                flight.departureGate = gateInfo["departureGate"] as! String
-                flightDictionary["departureGate"] =  gateInfo["departureGate"] as? String
                 
                 
-                
-                let schDep = jsonFlight["departureDate"] as! [String:AnyObject]
-//                flight.schdepartureTimeNumberLabel = schDep["dateLocal"] as! String
-                flightDictionary["departureDateLocal"] =  schDep["dateLocal"] as? String
+                //get depature gate code
+                if let departureAirportCode =  jsonFlight["departureAirportFsCode"] as? String  {
+                    
+                     flightDictionary["departureAirportFsCode"] = departureAirportCode
+                }else {
+                         flightDictionary["departureAirportFsCode"] = "N/A"
+                }
                
-                let schArr = jsonFlight["arrivalDate"] as! [String:AnyObject]
-//                flight.scharrivalFlightTimeLabel = schArr["dateLocal"] as! String
-                flightDictionary["arrivalDateLocal"] =  schArr["dateLocal"] as? String
+                //get arrival airport FsCode
+                if let arrivalAirportFsCode = jsonFlight["arrivalAirportFsCode"] as? String{
+    
+                       flightDictionary["arrivalAirportFsCode"] = arrivalAirportFsCode
+                }else {
+                    flightDictionary["arrivalAirportFsCode"] = "N/A"
+                }
+            
+                //Get gate info
+                if let gateInfo = jsonFlight["airportResources"] as? [String:AnyObject] {
+                    if let arrivalTerminal =  gateInfo["arrivalTerminal"] as? String{
+                        flightDictionary["arrivalTerminal"] = arrivalTerminal
+                    } else{
+                        flightDictionary["arrivalTerminal"] = "N/A"
+                    }
+
+                    //Get arrival gate code
+                    if let arrivalGate = gateInfo["arrivalGate"] as? String{
+                        flightDictionary["arrivalGate"]  = arrivalGate
+                    }else {
+                        flightDictionary["arrivalGate"] = "N/A"
+                    }
+                    
+                    //Get departure gate terminal
+                    if let departureTerminal = gateInfo["departureTerminal"] as? String{
+                    
+                        flightDictionary["departureTerminal"] = departureTerminal
+                      }else {
+                       flightDictionary["departureTerminal"] = "N/A"
+                    }
+
+                      //Get departure gate code
+                    if let departureGate =  gateInfo["departureGate"] as? String{
+                        flightDictionary["departureGate"] = departureGate
+                    } else {
+                        flightDictionary["departureGate"] = "N/A"
+                    }
+                }
+                
+                //get arrival and departure dates
+                if let schDep =  jsonFlight["departureDate"] as? [String:AnyObject]{
+
+                    if let departureDateLocal =  schDep["dateLocal"] as? String{
+                    
+                        flightDictionary["departureDateLocal"] = departureDateLocal
+                    } else {
+                        flightDictionary["departureDateLocal"] = "N/A"
+                    }
+                    
+                }
+               
+                if let schArr = jsonFlight["arrivalDate"] as? [String:AnyObject]{
+                    if let arrivalDateLocal = schArr["dateLocal"] as? String{
+                    
+                        flightDictionary["arrivalDateLocal"] = arrivalDateLocal
+                        
+                    }
+                }
                 
                 if !willCheckBag {
                     flightDictionary["willCheckBag"] = "false"
                 }
                     flightDictionary["willCheckBag"] = "true"
                 
-//                flightDictionary["departureAirportAddress"]  = airports[0]["street1"] as? String
-            
-                
             }
             
-            let appendix = jsonResult?["appendix"] as! [String:AnyObject]
-            
-            let airports = appendix["airports"] as! [AnyObject]
-            
-            let departureAirport = airports[0]
             
             
-            flightDictionary["departureAirportAddress"] = departureAirport["street1"] as? String
-            
-            print()
-            
-                print()
-        
+            //Get airport address
+            if let appendix = jsonResult?["appendix"] as? [String:AnyObject]{
+                if let airports = appendix["airports"] as! [Any]?{
+                    if let departureAirport = airports[0] as? AnyObject  {
+                //store airport address
+                flightDictionary["departureAirportAddress"] = departureAirport["street1"] as? String
+                    }
+            }
+            }
             
             
         } catch {

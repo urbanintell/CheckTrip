@@ -319,7 +319,7 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-T6-UGr">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5FF3C3EC-8CFE-4222-945B-EB7B28FB7520" translatesAutoresizingMaskIntoConstraints="NO" id="gZi-KL-tOc">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C1F86C6E-A7B0-4AD5-A94C-5391C7B1C3AB" translatesAutoresizingMaskIntoConstraints="NO" id="gZi-KL-tOc">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="3Rp-v7-ato"/>
                                                     <constraint firstAttribute="height" constant="40" id="Nve-a8-1hT"/>
@@ -353,7 +353,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="47F3C6EA-0A96-4200-9BDC-642992D84D2A" translatesAutoresizingMaskIntoConstraints="NO" id="7NV-jx-T11">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A6FF687D-86A9-430B-870E-DE862D79031C" translatesAutoresizingMaskIntoConstraints="NO" id="7NV-jx-T11">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Hc9-ye-GcZ"/>
                                             <constraint firstAttribute="width" constant="30" id="XaO-qa-Nko"/>
@@ -374,11 +374,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TAd-Xi-oYO">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="130" id="iGD-7T-Fxa" customClass="FlightViewCell" customModule="CheckTrip" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="130" id="iGD-7T-Fxa" customClass="FlightViewCell" customModule="CheckTrip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iGD-7T-Fxa" id="HX5-l0-mpl">
-                                            <frame key="frameInset" width="375" height="129"/>
+                                            <frame key="frameInset" width="1000" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VBB-a2-tH6">
@@ -603,7 +603,7 @@
                                             <frame key="frameInset" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DAL" borderStyle="roundedRect" placeholder="i.e : DAL, AA, etc.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGM-aZ-byS">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e : DAL, AA, etc.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGM-aZ-byS">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="JRV-6R-Cbc"/>
                                                     </constraints>
@@ -637,7 +637,7 @@
                                             <frame key="frameInset" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2049" borderStyle="roundedRect" placeholder="Enter flight number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nzt-OE-Daa">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter flight number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nzt-OE-Daa">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="7sS-Na-neV"/>
                                                     </constraints>
@@ -1058,7 +1058,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="47F3C6EA-0A96-4200-9BDC-642992D84D2A" width="141" height="112">
+        <image name="A6FF687D-86A9-430B-870E-DE862D79031C" width="141" height="112">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -1329,27 +1329,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABAI0AAAEB
 AAMAAAABAHAAAAECAAMAAAABAAgAAAEDAAMAAAABAAEAAAEGAAMAAAABAAMAAAERAAQAAAABAAAACAES
 AAMAAAABAAEAAAEVAAMAAAABAAEAAAEWAAMAAAABAHAAAAEXAAQAAAABAAA9sAEcAAMAAAABAAEAAAFA
-AAMAAAMAAAA+ZgFTAAMAAAABAAEAAIdzAAcAAAxIAABEZgAAAAD//wAAAAAAAGRk0tL//wAAAAB+fgAA
-5eUAAAAA//8AAKKiq6v39xISAADu7jc3T0///1FRAABISGZmcHDFxVRUmpoGBkJCXV1RUWlpmJggIGFh
-Vla6uv//LCw8PKWll5dvb0dHxcXMzGVl//+ioi4uQ0NoaDo6kpLy8ufnW1tZWVJSTk7o6MLCQUHa2s7O
-ZmasrJGRSkrT0xsboaEvL3BwtrYpKUlJdHQ4OLa2Xl6ZmY6OFBR5eb6+AADDw09P19dBQZGRlpY7O2Vl
+AAMAAAMAAAA+ZgFTAAMAAAABAAEAAIdzAAcAAAxIAABEZgAAAAD//wAAAAAAAGRk09P//wAAAAB+fgAA
+5uYAAAAA//8AAKOjrKz4+BISAADv7zc3T0///1FRAABISGZmcHDGxlRUm5sGBkJCXV1RUWlpmZkgIGFh
+Vla7u///LCw8PKammJhvb0dHxsbNzWVl//+joy4uQ0NoaDo6k5Pz8+joW1tZWVJSTk7p6cPDQUHb28/P
+ZmatrZKSSkrU1BsboqIvL3Bwt7cpKUlJdHQ4OLe3Xl6amo+PFBR5eb+/AADExE9P2NhBQZKSl5c7O2Vl
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAP//SUlLS0REoqLl5f//UVFGRq2tQEDz80pKTU3//09Pv7/Gxv39Y2M8PPn5amrCwv//
-kZFCQr29pKSlpdvbw8OwsFtbcnLOznd3mpq2tl5ey8vOztPT//9xcbm5x8e+vtTUt7fy8tTUzc3//7e3
-mZmoqJiYpKTU1P7+7OyYmMHBlpZ9ff//09OPj+jo9fXFxd3dqaltbdDQU1OsrKmpwsK2tnZ2YmJ0dGxs
-4OCOjtbWmJhqasLC398wMObmzMzx8cnJurrj45OTrq4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP//SUlLS0REo6Pm5v//UVFGRq6uQED09EpKTU3//09PwMDHx/7+Y2M8PPr6amrDw///
+kpJCQr6+paWmptzcxMSxsVtbcnLPz3d3m5u3t15ezMzPz9TU//9xcbq6yMi/v9XVuLjz89XVzs7//7i4
+mpqpqZmZpaXV1f//7e2ZmcLCl5d9ff//1NSQkOnp9vbGxt7eqqptbdHRU1Otraqqw8O3t3Z2YmJ0dGxs
+4eGPj9fXmZlqasPD4OAwMOfnzc3y8srKu7vk5JSUr68AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//+RkZKSjo7ExPHx//+VlY+P
-yMh+fvz8kpKTk///lJTV1dvb//+ionx8//+lpTU1//+4uI6OKirFxcTE6uo8PMnJnZ2qqkdHrKy8vM/P
-nZ1OTjo65eX//6ysExPd3dfXUlItLba2yclTU/v7nZ0MDCwsXFweHmtr7u7k5E1NRUVCQkFB39+9vSsr
-1NTBwVBQnJzFxUBA09MDA52dAABeXrW1DQ1ERHNzKCipqVRUeXl+fgAAb2+5uXZ2ubkwMMzMERF7e3l5
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//+SkpOTj4/FxfLy//+WlpCQ
+ycl+fv39k5OUlP//lZXW1tzc//+jo3x8//+mpjU1//+5uY+PKirGxsXF6+s8PMrKnp6rq0dHra29vdDQ
+np5OTjo65ub//62tExPe3tjYUlItLbe3yspTU/z8np4MDCwsXFweHmtr7+/l5U1NRUVCQkFB4OC+visr
+1dXCwlBQnZ3GxkBA1NQDA56eAABeXra2DQ1ERHNzKCiqqlRUeXl+fgAAb2+6unZ2urowMM3NERF7e3l5
 JydZWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1416,7 +1416,7 @@ qACtAMQAxgDIUXpRf1GKUZNRplGqUbVRvlHDUctRzlHTUeJR5lHtUfVSAlIHUglSC1IQUhhSG1IgUihS
 K1I9UkBSRQAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAFJHA
 </mutableData>
         </image>
-        <image name="5FF3C3EC-8CFE-4222-945B-EB7B28FB7520" width="64" height="64">
+        <image name="C1F86C6E-A7B0-4AD5-A94C-5391C7B1C3AB" width="64" height="64">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
