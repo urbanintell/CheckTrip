@@ -39,7 +39,10 @@ class Flight: NSObject{
     
     var departureAirportAddress:String?
     
+
     var departureMonthDayYear:String?
+
+
     
    
 

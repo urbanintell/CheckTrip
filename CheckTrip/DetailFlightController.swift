@@ -40,6 +40,7 @@ class DetailFlightController: UIViewController {
     var flightInfo = FlightInfo()
     var tsaInfo = [TSAInfo]()
     var flightData:[String:String]! = [:]
+    var latestTSA: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,8 +60,8 @@ class DetailFlightController: UIViewController {
         self.getLatestInfo(URL)
         
         //let URLForTSA: String = "http://apps.tsa.dhs.gov/MyTSAWebService/GetTSOWaitTimes.ashx?ap=ATL&output=json"
-        let URLForTSA = self.TSAURL("SEA")
-        self.getTSAInfo(URLForTSA)
+//        let URLForTSA = self.TSAURL("SEA")
+//        self.getTSAInfo(URLForTSA)
         
         // Do any additional setup after loading the view.
     }
@@ -92,6 +93,7 @@ class DetailFlightController: UIViewController {
             if let data = data {
                 
                 self.tsaInfo = self.parseTSAJsonData(data: data as NSData)
+                self.flightData["tsa"] = self.latestTSA
                 
             }
             
@@ -115,23 +117,33 @@ class DetailFlightController: UIViewController {
                 info.Created_Datetime = jsonTSA["Created_Datetime"] as! String
                 if(jsonTSA["WaitTime"] as! String == "1"){
                     info.WaitTimeIndex = "0 min"
+                    latestTSA = "0 min"
                 }else if(jsonTSA["WaitTime"] as! String == "2"){
                     info.WaitTimeIndex = "1 - 10 min"
+                    latestTSA = "1 - 10 min"
                 }else if(jsonTSA["WaitTime"] as! String == "3"){
                     info.WaitTimeIndex = "11 - 20 min"
+                    latestTSA = "11 - 20 "
                 }else if(jsonTSA["WaitTime"] as! String == "4"){
                     info.WaitTimeIndex = "21 - 30 min"
+                    latestTSA = "21 - 30 min"
                 }else if(jsonTSA["WaitTime"] as! String == "5"){
                     info.WaitTimeIndex = "31 - 45 min"
+                    latestTSA = "31 - 45 mi"
                 }else if(jsonTSA["WaitTime"] as! String == "6"){
                     info.WaitTimeIndex = "46 - 60 min"
+                    latestTSA = "46 - 60 min"
                 }else if(jsonTSA["WaitTime"] as! String == "7"){
                     info.WaitTimeIndex = "61 - 90 min"
+                    latestTSA = "61 - 90 min"
                 }else if(jsonTSA["WaitTime"] as! String == "8"){
                     info.WaitTimeIndex = "91 - 120 min"
-                }else{info.WaitTimeIndex = "120+ min"}
+                    latestTSA = "91 - 120 min"
+                }else{info.WaitTimeIndex = "120+ min"
+                latestTSA = "120+ min"}
                 
                 tsaInfo.append(info)
+                break;
             }
             
         } catch {
@@ -183,6 +195,10 @@ class DetailFlightController: UIViewController {
                 
          
                 self.setLabels()
+                
+                let URLForTSA = self.TSAURL(self.flightData["departureAirportFsCode"]!)
+                self.getTSAInfo(URLForTSA)
+                
             }
             
         })
@@ -231,7 +247,7 @@ class DetailFlightController: UIViewController {
             
             for jsonFlight in jsonFlights {
                 
-                
+                flightDictionary["tsa"] = "N/A"
                 //get depature gate code
                 if let departureAirportCode =  jsonFlight["departureAirportFsCode"] as? String  {
                     
