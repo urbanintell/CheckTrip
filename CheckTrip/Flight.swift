@@ -37,6 +37,8 @@ class Flight: NSObject{
     
     var departureAirportAddress:String?
     
+    var tsa:String?
+    
     
 
     
