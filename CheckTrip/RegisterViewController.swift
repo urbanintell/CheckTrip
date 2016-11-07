@@ -18,14 +18,11 @@ class RegisterViewController: UIViewController {
    
     @IBOutlet var spinner: UIActivityIndicatorView!
  
-    
     @IBOutlet weak var nameFeild: UITextField!
-    
     
     @IBOutlet weak var emailFeild: UITextField!
     
     @IBOutlet weak var passwordFeild: UITextField!
-    
     
     @IBOutlet weak var confirmPasswordFeild:
     

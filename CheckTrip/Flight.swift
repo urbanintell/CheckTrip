@@ -33,11 +33,15 @@ class Flight: NSObject{
     
     var arrivalTime:String?
     
+    var arrivalMonthDayYear:String?
+    
     var departureTime:String?
     
     var departureAirportAddress:String?
     
+    var departureMonthDayYear:String?
     
+   
 
     
 }

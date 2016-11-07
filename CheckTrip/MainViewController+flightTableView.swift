@@ -42,9 +42,9 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
         //departure gate
         cell?.departureFlightLabel?.text = flight.departureAirportFsCode!
         
-        cell?.departureTimeNumberLabel?.text = "12:00 pm"
+        cell?.departureTimeNumberLabel?.text = flight.departureTime
         
-        cell?.departureFlightDateLabel?.text = (flight.departureDateLocal!)
+        cell?.departureFlightDateLabel?.text = (flight.departureMonthDayYear!)
         
         cell?.departureGateLabel?.text = "Gate: \(flight.departureGate!)"
         
@@ -54,9 +54,9 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
         cell?.arrivalFlightLabel?.text = flight.arrivalAirportFsCode!
         
 
-        cell?.arivalFlightTimeLabel?.text = "3:00 AM"
+        cell?.arivalFlightTimeLabel?.text = flight.arrivalTime
         
-        cell?.arivalFlightDateLabel?.text = flight.arrivalDateLocal
+        cell?.arivalFlightDateLabel?.text = flight.arrivalMonthDayYear
         
         cell?.arrivalGateLabel?.text = "Gate: \(flight.arrivalGate!)"
         
@@ -101,17 +101,11 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
             let airportLat = Double((place[0].location?.coordinate.latitude)!)
             let airportLng = Double((place[0].location?.coordinate.longitude)!)
             
-            print(GoogleDestinationService.computeDuration(self.latitude, originLongitude: self.longitude, destinationLatitude: airportLat, destinationLongitude: airportLng))
+        
             
-            let url = "http://apps.tsa.dhs.gov/MyTSAWebService/GetTSOWaitTimes.ashx?ap=\(flight.departureAirportFsCode!)"
             
-            let tsaParser = TSAParser()
-            tsaParser.parseFeed(feedUrl: url, completionHandler: { (waitTimes:[(checkpointIndex: String, waitTime: String)]) in
-                self.waitTimesRSS = waitTimes
-                
-                print(waitTimes)
-            })
-
+           
+       
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -146,7 +140,7 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
                 
                 let flight = self.flights[indexPath.row]
                 
-                let defaultText = "My Flight arrives at \(flight.arrivalAirportFsCode!) at 4:00 pm.\n  BAGS: Checked in"
+                let defaultText = "My Flight arrives at \(flight.arrivalAirportFsCode!) at \(flight.arrivalTime!) pm.\n  BAGS: \(flight.willCheckBag!)"
                 
                 
                 
@@ -192,5 +186,20 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
                 }
             }
         }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showETA" {
+            if let indexPath = flightTableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! ETAController
+                destinationController.flight = flights[indexPath.row]
+                destinationController.latitude = self.latitude
+                destinationController.longitude = self.longitude
+            }
+        }
+        
+        
     }
 }

@@ -8,7 +8,6 @@ target 'CheckTrip' do
  pod 'Firebase/Core'
  pod 'Firebase/Auth'
  pod 'Firebase/Database'
-
  pod 'IQKeyboardManagerSwift'
  pod 'GooglePlaces'
  pod 'GoogleMaps'

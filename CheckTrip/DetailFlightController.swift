@@ -285,16 +285,40 @@ class DetailFlightController: UIViewController {
                     if let departureDateLocal =  schDep["dateLocal"] as? String{
                     
                         flightDictionary["departureDateLocal"] = departureDateLocal
+                        
+                        if let formattedDate = stringToDate(date: departureDateLocal){
+                            let splitDate = formattedDate.components(separatedBy: " ")
+                            let monthDayYear = splitDate[0]
+                            let time = splitDate[1] + " " + splitDate[2]
+                            flightDictionary["departureMonthDayYear"] = monthDayYear
+                            flightDictionary["departureTime"] = time
+                         
+                        }
+                    
                     } else {
                         flightDictionary["departureDateLocal"] = "N/A"
                     }
                     
                 }
+                
+                
+            
                
                 if let schArr = jsonFlight["arrivalDate"] as? [String:AnyObject]{
                     if let arrivalDateLocal = schArr["dateLocal"] as? String{
                     
                         flightDictionary["arrivalDateLocal"] = arrivalDateLocal
+                        
+                        
+                        if let formattedDate = stringToDate(date: arrivalDateLocal){
+                            let splitDate = formattedDate.components(separatedBy: " ")
+                            let monthDayYear = splitDate[0]
+                            let time = splitDate[1] + " " + splitDate[2]
+                            flightDictionary["arrivalMonthDayYear"] = monthDayYear
+                            flightDictionary["arrivalTime"] = time
+                            
+                            
+                        }
                         
                     }
                 }
@@ -309,15 +333,22 @@ class DetailFlightController: UIViewController {
             
             
             //Get airport address
-            if let appendix = jsonResult?["appendix"] as? [String:AnyObject]{
-                if let airports = appendix["airports"] as! [Any]?{
-                    if let departureAirport = airports[0] as? AnyObject  {
-                //store airport address
-                flightDictionary["departureAirportAddress"] = departureAirport["street1"] as? String
-                    }
-            }
-            }
+            let appendix = jsonResult?["appendix"] as! [String:AnyObject]
+            let airports = appendix["airports"] as! [AnyObject]
             
+            for value in airports {
+                if let airport = value as? [String:AnyObject] {
+                    
+                    if airport["fs"] as? String == flightDictionary["departureAirportFsCode"] {
+                         let departureAirport = airport
+                         flightDictionary["departureAirportAddress"] = departureAirport["street1"] as? String
+                       
+                        break
+                    }
+                }
+            
+            }
+           
             
         } catch {
             print(error)
@@ -325,13 +356,25 @@ class DetailFlightController: UIViewController {
         return flightDictionary
     }
     
-    func stringToDate(date:String){
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        if let formattedDate = formatter.date(from:date){
-            print(formattedDate)
+    func stringToDate(date:String) -> String?{
         
+   
+        var convertedDate:String?
+        let formatter = DateFormatter()
+        let newFormatter = DateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        if let parsedDateTimeString = formatter.date(from: date) {
+            formatter.string(from: parsedDateTimeString)
+            newFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+            newFormatter.dateFormat = "MM/dd/yyy hh:mm a"
+            convertedDate = newFormatter.string(from: parsedDateTimeString)
+        } else {
+            print("Could not parse date")
         }
+        
+        return convertedDate
+        
         
     }
     

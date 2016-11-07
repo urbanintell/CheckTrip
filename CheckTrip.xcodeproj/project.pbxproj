@@ -20,7 +20,6 @@
 		B2EC09C91DC03CD200B1C0F6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */; };
 		B2EC09CA1DC03CD200B1C0F6 /* FlightInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */; };
 		B2EC09CB1DC03CD200B1C0F6 /* DetailFlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */; };
-		B2EC09CC1DC03CD200B1C0F6 /* SearchFlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */; };
 		B2EC09D41DC03D0900B1C0F6 /* FlightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */; };
 		B2EC09D71DC03D4000B1C0F6 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D51DC03D4000B1C0F6 /* Flight.swift */; };
 		B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */; };
@@ -50,7 +49,6 @@
 		B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInputController.swift; sourceTree = "<group>"; };
 		B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFlightController.swift; sourceTree = "<group>"; };
-		B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightController.swift; sourceTree = "<group>"; };
 		B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightViewCell.swift; sourceTree = "<group>"; };
 		B2EC09D51DC03D4000B1C0F6 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfo.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				B2EC09C21DC03CD200B1C0F6 /* RegisterViewController.swift */,
 				B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */,
 				B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */,
-				B2EC09C51DC03CD200B1C0F6 /* SearchFlightController.swift */,
 				B2B23B271DC06BA7006DE10F /* ETAController.swift */,
 			);
 			name = Controllers;
@@ -316,7 +313,6 @@
 				B28A51FE1DC843BD00571B03 /* TSAInfo.swift in Sources */,
 				B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */,
 				B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */,
-				B2EC09CC1DC03CD200B1C0F6 /* SearchFlightController.swift in Sources */,
 				B2EC09A91DC037B600B1C0F6 /* AppDelegate.swift in Sources */,
 				B214818F1DC15844009B5730 /* TSAParser.swift in Sources */,
 				B2EC09DC1DC03D6B00B1C0F6 /* OpenWeatherService.swift in Sources */,
