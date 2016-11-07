@@ -93,6 +93,7 @@ class DetailFlightController: UIViewController {
             if let data = data {
                 
                 self.tsaInfo = self.parseTSAJsonData(data: data as NSData)
+                self.flightData["tsa"] = self.latestTSA
                 
             }
             
@@ -197,7 +198,7 @@ class DetailFlightController: UIViewController {
                 
                 let URLForTSA = self.TSAURL(self.flightData["departureAirportFsCode"]!)
                 self.getTSAInfo(URLForTSA)
-
+                
             }
             
         })
@@ -246,7 +247,7 @@ class DetailFlightController: UIViewController {
             
             for jsonFlight in jsonFlights {
                 
-                //flightDictionary["tsa"] = "N/A"
+                flightDictionary["tsa"] = "N/A"
                 //get depature gate code
                 if let departureAirportCode =  jsonFlight["departureAirportFsCode"] as? String  {
                     
