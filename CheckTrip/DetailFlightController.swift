@@ -120,27 +120,27 @@ class DetailFlightController: UIViewController {
                     latestTSA = "0 min"
                 }else if(jsonTSA["WaitTime"] as! String == "2"){
                     info.WaitTimeIndex = "1 - 10 min"
-                    latestTSA = "1 - 10 min"
+                    latestTSA = "5 min"
                 }else if(jsonTSA["WaitTime"] as! String == "3"){
                     info.WaitTimeIndex = "11 - 20 min"
-                    latestTSA = "11 - 20 "
+                    latestTSA = "15 min "
                 }else if(jsonTSA["WaitTime"] as! String == "4"){
                     info.WaitTimeIndex = "21 - 30 min"
-                    latestTSA = "21 - 30 min"
+                    latestTSA = "25 min"
                 }else if(jsonTSA["WaitTime"] as! String == "5"){
                     info.WaitTimeIndex = "31 - 45 min"
-                    latestTSA = "31 - 45 mi"
+                    latestTSA = "38 min"
                 }else if(jsonTSA["WaitTime"] as! String == "6"){
                     info.WaitTimeIndex = "46 - 60 min"
-                    latestTSA = "46 - 60 min"
+                    latestTSA = "53 min"
                 }else if(jsonTSA["WaitTime"] as! String == "7"){
                     info.WaitTimeIndex = "61 - 90 min"
-                    latestTSA = "61 - 90 min"
+                    latestTSA = "75 min"
                 }else if(jsonTSA["WaitTime"] as! String == "8"){
                     info.WaitTimeIndex = "91 - 120 min"
-                    latestTSA = "91 - 120 min"
+                    latestTSA = "100 min"
                 }else{info.WaitTimeIndex = "120+ min"
-                latestTSA = "120+ min"}
+                latestTSA = "120 min"}
                 
                 tsaInfo.append(info)
                 break;
