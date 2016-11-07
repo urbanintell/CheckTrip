@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AC3DAD41DD1165000BF0DFE /* SearchCityToCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */; };
 		B214818C1DC136FA009B5730 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818A1DC136FA009B5730 /* AppState.swift */; };
 		B214818D1DC136FA009B5730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818B1DC136FA009B5730 /* Constants.swift */; };
 		B214818F1DC15844009B5730 /* TSAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818E1DC15844009B5730 /* TSAParser.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityToCity.swift; sourceTree = "<group>"; };
 		52C49BC110A7D3F3510FDDED /* Pods-CheckTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCB0F8AFE459A58D34C1F93 /* Pods_CheckTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B214818A1DC136FA009B5730 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				B2EC09DA1DC03D6B00B1C0F6 /* OpenWeatherService.swift */,
 				B2EC09DB1DC03D6B00B1C0F6 /* GoogleDestinationService.swift */,
 				B214818E1DC15844009B5730 /* TSAParser.swift */,
+				3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				B2EC09CA1DC03CD200B1C0F6 /* FlightInputController.swift in Sources */,
 				B2EC09C81DC03CD200B1C0F6 /* SignInViewController.swift in Sources */,
 				B2EC09C71DC03CD200B1C0F6 /* MainViewController+flightTableView.swift in Sources */,
+				3AC3DAD41DD1165000BF0DFE /* SearchCityToCity.swift in Sources */,
 				B2EC09D71DC03D4000B1C0F6 /* Flight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
