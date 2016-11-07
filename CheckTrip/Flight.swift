@@ -43,7 +43,7 @@ class Flight: NSObject{
     var departureMonthDayYear:String?
 
 
-    
+    var tsa:String?
    
 
     
