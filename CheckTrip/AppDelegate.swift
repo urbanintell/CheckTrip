@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
         content.title = "CheckTrip Alert"
-        content.body = "Leave at 6:43pm to catch your 5:45pm flight"
+        content.body = "You have a flight coming up soon"
         content.sound = UNNotificationSound.default()
         content.categoryIdentifier = "myCategory"
         
@@ -136,7 +136,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
         if response.actionIdentifier == "remindLater" {
             let newDate = Date(timeInterval: 900, since: Date())
             scheduleNotification(at: newDate)
@@ -144,4 +143,3 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
     }
 }
-

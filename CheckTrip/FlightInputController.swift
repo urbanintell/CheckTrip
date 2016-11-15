@@ -15,6 +15,7 @@ class FlightInputController: UITableViewController {
     @IBOutlet weak var flightDate: UITextField!
     @IBOutlet weak var airlineCode: UITextField!
     @IBOutlet weak var checkButton: UIButton!
+    var currentUser:[String:Any] = [:]
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -65,6 +66,8 @@ class FlightInputController: UITableViewController {
         
     }
     
+    
+    
     @objc func handler(sender: UIDatePicker) {
         let timeFormatter = DateFormatter()
         timeFormatter.timeStyle = .full
@@ -113,6 +116,8 @@ class FlightInputController: UITableViewController {
         
     }
     
+    
+   
     
     
 }

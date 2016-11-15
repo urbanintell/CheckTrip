@@ -140,7 +140,7 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
                 
                 let flight = self.flights[indexPath.row]
                 
-                let defaultText = "My Flight arrives at \(flight.arrivalAirportFsCode!) at \(flight.arrivalTime!) pm.\n  BAGS: \(flight.willCheckBag!)"
+                let defaultText = "Copy this link in pickups to receive notifcations on \(flight.passenger!)'s flight:\n\(flight.linkToFlight!)"
                 
                 
                 
@@ -191,12 +191,13 @@ extension MainViewController: UITableViewDataSource,UITableViewDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showETA" {
+        if segue.identifier == "showDetailFlight" {
             if let indexPath = flightTableView.indexPathForSelectedRow {
-                let destinationController = segue.destination as! ETAController
+                let destinationController = segue.destination as! DetailedFlightViewController
                 destinationController.flight = flights[indexPath.row]
                 destinationController.latitude = self.latitude
                 destinationController.longitude = self.longitude
+                
             }
         }
         

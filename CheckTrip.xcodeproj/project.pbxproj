@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AC3DAD41DD1165000BF0DFE /* SearchCityToCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */; };
 		B214818C1DC136FA009B5730 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818A1DC136FA009B5730 /* AppState.swift */; };
 		B214818D1DC136FA009B5730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818B1DC136FA009B5730 /* Constants.swift */; };
 		B214818F1DC15844009B5730 /* TSAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214818E1DC15844009B5730 /* TSAParser.swift */; };
 		B28A51FE1DC843BD00571B03 /* TSAInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28A51FD1DC843BD00571B03 /* TSAInfo.swift */; };
 		B2B23B281DC06BA7006DE10F /* ETAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B23B271DC06BA7006DE10F /* ETAController.swift */; };
+		B2B73CF51DD92AA5009D07D5 /* DetailedFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B73CF41DD92AA5009D07D5 /* DetailedFlightViewController.swift */; };
+		B2B73CF71DD93052009D07D5 /* PickUpsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B73CF61DD93052009D07D5 /* PickUpsTableViewController.swift */; };
+		B2C4AB1B1DDA0ACC00A4C041 /* PickUpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4AB1A1DDA0ACC00A4C041 /* PickUpViewCell.swift */; };
+		B2C4AB1D1DDA0D8E00A4C041 /* PickUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4AB1C1DDA0D8E00A4C041 /* PickUp.swift */; };
 		B2EC09A91DC037B600B1C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */; };
 		B2EC09AE1DC037B600B1C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC09AC1DC037B600B1C0F6 /* Main.storyboard */; };
 		B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EC09BF1DC03CD200B1C0F6 /* MainViewController.swift */; };
@@ -33,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityToCity.swift; sourceTree = "<group>"; };
 		52C49BC110A7D3F3510FDDED /* Pods-CheckTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckTrip/Pods-CheckTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCB0F8AFE459A58D34C1F93 /* Pods_CheckTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B214818A1DC136FA009B5730 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -41,6 +43,10 @@
 		B214818E1DC15844009B5730 /* TSAParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAParser.swift; sourceTree = "<group>"; };
 		B28A51FD1DC843BD00571B03 /* TSAInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAInfo.swift; sourceTree = "<group>"; };
 		B2B23B271DC06BA7006DE10F /* ETAController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETAController.swift; sourceTree = "<group>"; };
+		B2B73CF41DD92AA5009D07D5 /* DetailedFlightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedFlightViewController.swift; sourceTree = "<group>"; };
+		B2B73CF61DD93052009D07D5 /* PickUpsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpsTableViewController.swift; sourceTree = "<group>"; };
+		B2C4AB1A1DDA0ACC00A4C041 /* PickUpViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpViewCell.swift; sourceTree = "<group>"; };
+		B2C4AB1C1DDA0D8E00A4C041 /* PickUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUp.swift; sourceTree = "<group>"; };
 		B2EC09A51DC037B600B1C0F6 /* CheckTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC09A81DC037B600B1C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2EC09AD1DC037B600B1C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				B2EC09D51DC03D4000B1C0F6 /* Flight.swift */,
 				B2EC09D61DC03D4000B1C0F6 /* FlightInfo.swift */,
 				B28A51FD1DC843BD00571B03 /* TSAInfo.swift */,
+				B2C4AB1C1DDA0D8E00A4C041 /* PickUp.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				B2EC09D31DC03D0900B1C0F6 /* FlightViewCell.swift */,
+				B2C4AB1A1DDA0ACC00A4C041 /* PickUpViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -172,6 +180,8 @@
 				B2EC09C31DC03CD200B1C0F6 /* FlightInputController.swift */,
 				B2EC09C41DC03CD200B1C0F6 /* DetailFlightController.swift */,
 				B2B23B271DC06BA7006DE10F /* ETAController.swift */,
+				B2B73CF41DD92AA5009D07D5 /* DetailedFlightViewController.swift */,
+				B2B73CF61DD93052009D07D5 /* PickUpsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -182,7 +192,6 @@
 				B2EC09DA1DC03D6B00B1C0F6 /* OpenWeatherService.swift */,
 				B2EC09DB1DC03D6B00B1C0F6 /* GoogleDestinationService.swift */,
 				B214818E1DC15844009B5730 /* TSAParser.swift */,
-				3AC3DAD31DD1165000BF0DFE /* SearchCityToCity.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B73CF51DD92AA5009D07D5 /* DetailedFlightViewController.swift in Sources */,
 				B28A51FE1DC843BD00571B03 /* TSAInfo.swift in Sources */,
 				B2EC09D81DC03D4000B1C0F6 /* FlightInfo.swift in Sources */,
 				B2EC09C61DC03CD200B1C0F6 /* MainViewController.swift in Sources */,
@@ -326,11 +336,13 @@
 				B2EC09D41DC03D0900B1C0F6 /* FlightViewCell.swift in Sources */,
 				B2EC09DD1DC03D6B00B1C0F6 /* GoogleDestinationService.swift in Sources */,
 				B2B23B281DC06BA7006DE10F /* ETAController.swift in Sources */,
+				B2C4AB1B1DDA0ACC00A4C041 /* PickUpViewCell.swift in Sources */,
 				B2EC09CA1DC03CD200B1C0F6 /* FlightInputController.swift in Sources */,
 				B2EC09C81DC03CD200B1C0F6 /* SignInViewController.swift in Sources */,
 				B2EC09C71DC03CD200B1C0F6 /* MainViewController+flightTableView.swift in Sources */,
-				3AC3DAD41DD1165000BF0DFE /* SearchCityToCity.swift in Sources */,
 				B2EC09D71DC03D4000B1C0F6 /* Flight.swift in Sources */,
+				B2B73CF71DD93052009D07D5 /* PickUpsTableViewController.swift in Sources */,
+				B2C4AB1D1DDA0D8E00A4C041 /* PickUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

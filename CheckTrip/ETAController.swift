@@ -21,6 +21,7 @@ class ETAController: UIViewController, CLLocationManagerDelegate,MKMapViewDelega
     var locationManager = CLLocationManager()
     var latitude: CLLocationDegrees!
     var longitude: CLLocationDegrees!
+    var dateTime:String?
     
     var flight:Flight!
     override func viewDidLoad() {
@@ -37,12 +38,15 @@ class ETAController: UIViewController, CLLocationManagerDelegate,MKMapViewDelega
         etaLabel.text = flight.departureTime
         
         
+  
+        
         configureMap()
 
         
         
     }
     
+
     
     func configureMap(){
     
@@ -147,6 +151,8 @@ class ETAController: UIViewController, CLLocationManagerDelegate,MKMapViewDelega
             
             ETA = duration["text"] as? String
             let min = Int((ETA?.components(separatedBy: " ")[0])!)
+            
+            print("TIME: \(min)")
             subtractGoogleMapsEta(subtract:min!)
             
         }catch {
@@ -170,9 +176,7 @@ class ETAController: UIViewController, CLLocationManagerDelegate,MKMapViewDelega
             let etaDate = parsedDateTimeString.addingTimeInterval(TimeInterval(180 * -subtract))
             print(etaDate)
             
-            //setup push notifcations
-            let delegate = UIApplication.shared.delegate as? AppDelegate
-            delegate?.scheduleNotification(at: etaDate)
+          
             
             OperationQueue.main.addOperation {
                 

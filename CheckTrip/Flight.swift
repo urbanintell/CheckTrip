@@ -45,6 +45,9 @@ class Flight: NSObject{
 
     var tsa:String?
    
-
+    var airlineCode:String?
+    var flightNumber:String?
     
+    var linkToFlight:String?
+    var passenger:String?
 }

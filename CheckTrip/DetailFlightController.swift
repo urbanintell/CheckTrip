@@ -17,8 +17,8 @@ class DetailFlightController: UIViewController {
     @IBOutlet weak var arrivalTerminalLabel: UILabel!
     @IBOutlet weak var departureGateLabel: UILabel!
     @IBOutlet weak var arrivalGateLael: UILabel!
-    
-    
+    var ref: FIRDatabaseReference!
+    var currentUser:[String:AnyObject] = [:]
     
     @IBOutlet weak var departureTimeLabel: UILabel!
     
@@ -41,6 +41,7 @@ class DetailFlightController: UIViewController {
     var tsaInfo = [TSAInfo]()
     var flightData:[String:String]! = [:]
     var latestTSA: String!
+    var dateTime:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +55,7 @@ class DetailFlightController: UIViewController {
         
         spinner.startAnimating()
         
-        
+        setCurrentUserForSession()
         
         let URL = self.flightStatus(airlineCode, airlineNumber: flightNumber, date: flightDate)
         self.getLatestInfo(URL)
@@ -64,6 +65,33 @@ class DetailFlightController: UIViewController {
 //        self.getTSAInfo(URLForTSA)
         
         // Do any additional setup after loading the view.
+        
+        
+      
+    }
+    
+    
+    func stringToDateForPush(date:String) -> Date{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        
+        var convertedDate:String?
+        
+        let newFormatter = DateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        if let parsedDateTimeString = formatter.date(from: date) {
+            formatter.string(from: parsedDateTimeString)
+            newFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+            newFormatter.dateFormat = "MM/dd/yyy hh:mm a"
+            convertedDate = newFormatter.string(from: parsedDateTimeString)
+        } else {
+            print("Could not parse date")
+        }
+        
+        let date = newFormatter.date(from: convertedDate!)
+        
+        return date!
     }
     
     override func didReceiveMemoryWarning() {
@@ -192,8 +220,11 @@ class DetailFlightController: UIViewController {
                 }
                 
                 self.flightData = data
-                
+                self.flightData["flightNumber"] = self.flightNumber
+                self.flightData["airlineCode"] = self.airlineCode
+                self.flightData["passenger"] = self.currentUser["name"] as! String
          
+              
                 self.setLabels()
                 
                 let URLForTSA = self.TSAURL(self.flightData["departureAirportFsCode"]!)
@@ -302,6 +333,17 @@ class DetailFlightController: UIViewController {
                     
                         flightDictionary["departureDateLocal"] = departureDateLocal
                         
+                        dateTime = departureDateLocal
+                        
+                        let notification = stringToDateForPush(date: dateTime!)
+                        
+                        //setup push notifcations
+                        let delegate = UIApplication.shared.delegate as? AppDelegate
+                        delegate?.scheduleNotification(at: notification)
+                        
+                        
+                        
+                        
                         if let formattedDate = stringToDate(date: departureDateLocal){
                             let splitDate = formattedDate.components(separatedBy: " ")
                             let monthDayYear = splitDate[0]
@@ -408,9 +450,19 @@ class DetailFlightController: UIViewController {
         }
         
         let reference = firebaseRef.database.reference().child("users").child(uid).child("flights").childByAutoId()
-            
+        
+ 
+            let linkToFlightInFirebase = reference.url
+            let jsonPart = ".json"
+        
             flightData["flightId"] = reference.key
-                
+        
+            flightData["linkToFlight"] = linkToFlightInFirebase + jsonPart
+        
+            
+        
+            print("LINK TO FLIGHT: \(flightData["linkToFlight"])" )
+        
             reference.setValue(flightData){ (error, ref) -> Void in
                 if error != nil {
                     print("\(error)")
@@ -420,6 +472,32 @@ class DetailFlightController: UIViewController {
         
         dismiss(animated: true, completion: nil)
         
+        
+        
+    }
+    
+    func setCurrentUserForSession(){
+        
+        self.ref = FIRDatabase.database().reference()
+        
+        guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+            
+            return
+        }
+        
+        let user:FIRDatabaseReference = ref.child("users").child(uid)
+        
+        user.observeSingleEvent(of: .value, with: { (snapshot:FIRDataSnapshot) in
+            
+            
+            guard let user = snapshot.value as? [String: AnyObject] else {
+                
+                return
+            }
+            self.currentUser = user
+            
+            //            print(self.currentUser)
+        })
         
         
     }
