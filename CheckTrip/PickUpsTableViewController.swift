@@ -175,7 +175,8 @@ class PickUpsTableViewController: UITableViewController {
         cell.arrivalFlightLabel?.text = pickup.arrivalAirport!
         cell.arrivalTerminalLabel?.text = "Termial \(pickup.arrivalTerminal!)"
         cell.arrivalGateLabel?.text = "Gate \(pickup.arrivalGate!)"
-        cell.arivalFlightTimeLabel?.text = pickup.arrivalDate
+        cell.arivalFlightTimeLabel?.text = pickup.arrivalTime
+        cell.arivalFlightDateLabel?.text = pickup.arrivalDate
 
       
 
